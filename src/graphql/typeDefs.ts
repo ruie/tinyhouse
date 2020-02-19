@@ -4,13 +4,14 @@ export const typeDefs = gql`
   type Listing {
     id: ID!
     name: String!
+    email: String!
   }
 
   type Query {
-    listings: Listing!
+    listings: [Listing!]!
   }
 
   type Mutation {
-    deleteListing(id: ID): Listing!
+    deleteListing(id: ID!): Listing!
   }
 `;
